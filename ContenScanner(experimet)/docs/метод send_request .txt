@@ -1,0 +1,30 @@
+В этом примере мы создаем экземпляр класса APIHandler и вызываем метод
+ send_request с request_type='POST' и передаем данные в параметре data. 
+В результате будет выполнен HTTP-запрос POST с данными, переданными в параметре data.
+
+Таким образом, метод send_request может быть использован для работы с различными API, 
+если они поддерживают HTTP-запросы и имеют похожий интерфейс.
+
+import requests
+from urllib.parse import urlencode
+
+class APIHandler:
+    base_url = 'https://api.example.com/resources'
+
+    def send_request(self, method, request_type='GET', **kwargs):
+        url = f'{self.base_url}{method}'
+        if request_type == 'GET':
+            full_url = f'{url}?{urlencode(kwargs)}'
+            response = requests.get(full_url)
+        elif request_type == 'POST':
+            response = requests.post(url, data=kwargs)
+        return response.json()
+
+# Пример использования метода send_request для создания ресурса
+api_handler = APIHandler()
+data = {'name': 'John Doe', 'age': 30}
+response = api_handler.send_request('/users', request_type='POST', **data)
+
+
+send_request         
+
