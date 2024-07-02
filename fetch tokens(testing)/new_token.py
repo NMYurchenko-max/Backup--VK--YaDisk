@@ -116,8 +116,8 @@ def main():
     Основная логика скрипта: получение authorization_code
      и обмен его на токен доступа.
     """
-    client_id = '51904490'
-    client_secret = 'eLyHuApNp0V66Vpch3Vn'
+    client_id = ''
+    client_secret = ''
     redirect_uri = 'https://oauth.vk.com/nmyurchenko.http'
     # Получение кода авторизации
     authorization_code, code_verifier = (

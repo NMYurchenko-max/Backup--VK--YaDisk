@@ -3,8 +3,8 @@ from urllib.parse import urlparse, parse_qs
 import requests
 
 # Мои данные для OAuth2 (scorp должны совпадать с приложением)
-client_id = '51904490'
-client_secret = 'eLyHuApNp0V66Vpch3Vn'
+client_id = ''
+client_secret = ''
 redirect_uri = 'https://oauth.vk.com/nmyurchenko.http'
 scope = scope = [
     'phone', 'friends', 'wall', 'groups', 'messages', 'notifications',
