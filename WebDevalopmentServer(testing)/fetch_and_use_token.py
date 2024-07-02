@@ -4,8 +4,8 @@ import requests
 
 
 # Ваши данные для OAuth2
-client_id = '51904490'
-client_secret = 'eLyHuApNp0V66Vpch3Vn'
+client_id = ''
+client_secret = ''
 redirect_uri = 'https://oauth.vk.com/nmyurchenko.http'
 scope = [
     'phone', 'friends', 'wall', 'groups', 'messages', 'notifications',
@@ -81,7 +81,7 @@ except Exception as e:
 # Например, можно импортировать токен
 # и использовать его в запросах к VK API
 token = {'access_token': 'your_access_token'}
-user_id = '775884604'
+user_id = ''
 user_info_url = (
     "https://api.vk.com/method/users.get?"
     "fields=bdate,city&access_token=" + token['access_token']
